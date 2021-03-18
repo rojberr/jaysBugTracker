@@ -16,7 +16,7 @@ public class BeetleApplication {
 
 	@GetMapping
 	public List<String> hello() {
-		return List.of("Hello", "World");
+		return List.of("Hello", "World", "I'm a wild man!");
 	}
 
 }

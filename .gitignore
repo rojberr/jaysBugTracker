@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Your own apps should not commit the .env file to version control,
+### because it often includes secure credentials. Include .env in your repo’s .gitignore file.
+.env
