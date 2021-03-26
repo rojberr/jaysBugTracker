@@ -2,21 +2,12 @@ package com.beetletracker.beetle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @SpringBootApplication
-@RestController
 public class BeetleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BeetleApplication.class, args);
+	public static void main(String[] args) {SpringApplication.run(BeetleApplication.class, args);
 	}
 
-	@GetMapping
-	public List<String> hello() {
-		return List.of("Hello", "World", "I'm a wild man!");
-	}
 
 }
