@@ -1,8 +1,13 @@
-package com.beetletracker.beetle.issues;
+package com.beetletracker.beetle.user;
+
+import com.beetletracker.beetle.role.Role;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
+@Data
 @Entity
 @Table(name="AppUser")
 public class User {
@@ -19,11 +24,11 @@ public class User {
     private Long id;
     private String firstName;
     private String lastName;
-
     private LocalDate creationDate;
-
     private String password;
     private String passwordSalt;
-
     private String email;
+    @ManyToMany
+    @JoinTable(name = "user_role")
+    private Set<Role> roles;
 }
