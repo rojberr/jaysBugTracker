@@ -66,10 +66,10 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend"><span class="input-group-text">
                       <svg class="c-icon">
+                          <form method="post">
                         <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                       </svg></span></div>
-                            <form method="post">
-                            <input class="form-control" type="username" placeholder="Email" name="username">
+                            <input class="form-control" type="text" placeholder="Email" name="username">
                         </div>
                         <div class="input-group mb-4">
                             <div class="input-group-prepend"><span class="input-group-text">
