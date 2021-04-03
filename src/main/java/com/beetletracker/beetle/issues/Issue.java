@@ -1,6 +1,9 @@
 package com.beetletracker.beetle.issues;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+
 
 @Entity
 @Table
