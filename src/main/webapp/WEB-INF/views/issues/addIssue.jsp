@@ -68,7 +68,7 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Beetle Tracker</a>
+        <a class="navbar-brand js-scroll-trigger" href="/">Beetle Tracker</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
                 type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -152,24 +152,24 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Made by</h4>
                 <p class="lead mb-0">
-                    <a href="https://drzymala.dev/">Rojberr</a>
+                    <a href="<c:url value="https://drzymala.dev/"/>">Rojberr</a>
                     <br />
-                    <a href="https://github.com/rojberr/beetle-tracker">Git-Hub Contributors</a>
+                    <a href="<c:url value="https://github.com/rojberr/beetle-tracker"/>">Git-Hub Contributors</a>
                 </p>
             </div>
             <!-- Footer Social Icons-->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Around the Web</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/rojberr/beetle-tracker"><i class="fab fa-fw fa-github"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://www.oracle.com/java/"><i class="fab fa-java"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://beetle-tracker.herokuapp.com/home"><i class="fas fa-bug"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="<c:url value="https://github.com/rojberr/beetle-tracker"/>"><i class="fab fa-fw fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="<c:url value="https://www.oracle.com/java/"/>"><i class="fab fa-java"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="<c:url value="https://beetle-tracker.herokuapp.com/home"/>"><i class="fas fa-bug"></i></a>
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4">
                 <h4 class="text-uppercase mb-4">About Beetle Tracker</h4>
                 <p class="lead mb-0">
                     Beetle Tracker is a free to use, MIT licensed app created by many
-                    <a href="https://github.com/rojberr/beetle-tracker">Git-Hub contributors</a>
+                    <a href="<c:url value="https://github.com/rojberr/beetle-tracker"/>">Git-Hub contributors</a>
                     .
                 </p>
             </div>
@@ -205,7 +205,7 @@
                                 <div class="divider-custom-line"></div>
                             </div>
                             <!-- Portfolio Modal - Image-->
-                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" />
+                            <img class="img-fluid rounded mb-5" src="<c:url value="/assets/img/portfolio/cabin.png"/>" alt="" />
                             <!-- Portfolio Modal - Text-->
                             <p class="mb-5">To use Bettle Tracker Online simply click on the button and log in.</p>
                             <button class="btn btn-primary" data-dismiss="modal">
@@ -239,9 +239,9 @@
                                 <div class="divider-custom-line"></div>
                             </div>
                             <!-- Portfolio Modal - Image-->
-                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="" />
+                            <img class="img-fluid rounded mb-5" src="<c:url value="/assets/img/portfolio/cake.png"/>" alt="" />
                             <!-- Portfolio Modal - Text-->
-                            <p class="mb-5">To host it yourself to <a href="https://github.com/rojberr/beetle-tracker">the Git-Hub page</a> and follow instructions.</p>
+                            <p class="mb-5">To host it yourself to <a href="<c:url value="https://github.com/rojberr/beetle-tracker"/>">the Git-Hub page</a> and follow instructions.</p>
                             <button class="btn btn-primary" data-dismiss="modal">
                                 <i class="fas fa-times fa-fw"></i>
                                 Close Window
