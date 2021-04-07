@@ -21,6 +21,6 @@ public class IssuesController {
 //    }
     @GetMapping("/create")
     public String createGet() {
-        return "report";
+        return "issues/report";
     }
 }
