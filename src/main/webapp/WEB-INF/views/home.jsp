@@ -6,6 +6,6 @@
     <title>Home</title>
 </head>
 <body>
-    Mysterious content only for logged user
+    Mysterious content only for logged user dfsgdfghdfg
 </body>
 </html>
