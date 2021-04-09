@@ -12,29 +12,29 @@ import static java.time.Month.JANUARY;
 @Configuration
 public class IssuesConfig {
 
-    CommandLineRunner commandLineRunner(IssuesRepository repository) {
-        return args -> {
-            Issue issue1 = new Issue(
-                    "name",
-                    LocalDate.of(2000, JANUARY, 5),
-                    "topic",
-                    "email",
-                    "subject",
-                    "description"
-            );
-
-            Issue issue2 = new Issue(
-                    "name",
-                    LocalDate.of(2000, JANUARY, 5),
-                    "topic",
-                    "email",
-                    "subject",
-                    "description"
-            );
-
-            repository.saveAll(
-                    List.of(issue1, issue2)
-            );
-        };
-    }
+//    CommandLineRunner commandLineRunner(IssuesRepository repository) {
+//        return args -> {
+//            Issue issue1 = new Issue(
+//                    "name",
+//                    LocalDate.of(2000, JANUARY, 5),
+//                    "topic",
+//                    "email",
+//                    "subject",
+//                    "description"
+//            );
+//
+//            Issue issue2 = new Issue(
+//                    "name",
+//                    LocalDate.of(2000, JANUARY, 5),
+//                    "topic",
+//                    "email",
+//                    "subject",
+//                    "description"
+//            );
+//
+//            repository.saveAll(
+//                    List.of(issue1, issue2)
+//            );
+//        };
+//    }
 }
