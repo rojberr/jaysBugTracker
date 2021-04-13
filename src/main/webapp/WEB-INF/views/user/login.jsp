@@ -1,15 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+
+<!DOCTYPE html>
 <!--
-* Created by Rojberr, using ...
+* Created by rojberr & michals3r3k using: ...
 * CoreUI - Free Bootstrap Admin Template
 * @version v3.4.0
 * @link https://coreui.io
 * Copyright (c) 2020 creativeLabs Łukasz Holeczek
 * Licensed under MIT (https://coreui.io/license)
 -->
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <base href="./">
@@ -58,7 +61,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="post">
+            <form name="login" method="post">
             <div class="card-group">
                 <div class="card p-4">
                     <div class="card-body">
@@ -69,14 +72,14 @@
                       <svg class="c-icon">
                         <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                       </svg></span></div>
-                            <input class="form-control" type="text" placeholder="Email" name="username">
+                            <input class="form-control" type="text" placeholder="Email" id="email" name="email" />
                         </div>
                         <div class="input-group mb-4">
                             <div class="input-group-prepend"><span class="input-group-text">
                       <svg class="c-icon">
                         <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-lock-locked"></use>
                       </svg></span></div>
-                            <input class="form-control" type="password" placeholder="Password" name="password">
+                            <input class="form-control" type="password" placeholder="Password" id="password" name="password" />
                         </div>
                         <div class="row">
                             <div class="col-6">
