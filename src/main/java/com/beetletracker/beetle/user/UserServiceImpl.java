@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User findByEmail(String email) {
         return userRepository.findFirstByEmail(email).orElseThrow(()->
-                new IllegalStateException("User with email "+email+"does not exists"));
+                new IllegalStateException("User with email "+email+" does not exists"));
     }
 
     @Override

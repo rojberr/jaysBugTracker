@@ -1,37 +1,32 @@
 package com.beetletracker.beetle.controller;
 
-<<<<<<< HEAD
 import com.beetletracker.beetle.issues.Issue;
-import com.beetletracker.beetle.issues.IssueCategoryService;
+import com.beetletracker.beetle.issues.IssueService;
+import com.beetletracker.beetle.user.User;
+import com.beetletracker.beetle.user.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-=======
->>>>>>> e9b9e248f79344e4f965fe5a70f3b8729730de5a
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-<<<<<<< HEAD
 import java.util.List;
 
-=======
->>>>>>> e9b9e248f79344e4f965fe5a70f3b8729730de5a
 @Controller
+@AllArgsConstructor
 public class HomeController {
+    private final UserService userService;
+    private final IssueService issueService;
 
     @GetMapping("/home")
     public String getIssues() {
-<<<<<<< HEAD
         return "home";
-=======
-        return "issues/home";
->>>>>>> e9b9e248f79344e4f965fe5a70f3b8729730de5a
     }
 
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e9b9e248f79344e4f965fe5a70f3b8729730de5a
+    @GetMapping("/app/home")
+    public String myIssuesGet(Model model, Authentication auth){
+        List<Issue> issues = issueService.findAllByUser(userService.findByEmail(auth.getName()));
+        model.addAttribute("issues", issues);
+        return "issues/list";
+    }
 }
