@@ -9,7 +9,7 @@
     <meta name="description" content="Beetle Tracker - Open Source Issue and Bug Tracker"/>
     <meta name="author" content="Rojberr, Michal & other Contributors"/>
     <meta name="keyword" content="Bootstrap,Bug,Tracker,Open,Source,Issues, Issue,jQuery,CSS,HTML,RWD,Dashboard"/>
-    <title>Add issue</title>
+    <title>Your issues</title>
     <!-- Favicon-->
     <%@include file="../headLinks.jsp"%>
 </head>
@@ -17,10 +17,12 @@
 <!-- Navigation-->
 <%@include file="../beetleHeader.jsp"%>
 
-<section id="add-issue" style="margin-top: 200px;">
+
+
+<section id="your-issues" style="margin-top: 200px;">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Add Issue</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your Issues</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -28,48 +30,33 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Add Issue Section Form-->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                <form:form id="issueForm" name="addIssue" method="post" modelAttribute="issue">
-                    <div class="card">
-                        <div class="card-header"><strong>Issue</strong> <small>Form</small></div>
+        <div class="row my-5">
+            <c:forEach items="${issues}" var="issue">
+                <div class="col-md-4 my-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                    <div class="card border-danger">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-9">
+                                ${issue.subject}
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="btn btn-circle btn-danger" style="margin: 0"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <!-- /.row-->
-                            <div class="row">
-                                <div class="form-group col-sm-8">
-                                    <form:select path="categoryId" cssClass="form-control" items="${categories}" itemLabel="category" itemValue="id"/>
-                                </div>
-                            </div>
-                            <!-- /.row-->
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="subject">Subject</label>
-                                        <form:input path="subject" cssClass="form-control" type="text" placeholder="Enter subject"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.row-->
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <form:textarea path="description" cssClass="form-control" name="issue-description" rows="9" placeholder="Description.."/>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-block btn-primary">Send</button>
+                            <blockquote class="blockquote mb-0">
+                                <p>${issue.description}.</p>
+                                <footer class="blockquote-footer">${issue.dob}</footer>
+                            </blockquote>
                         </div>
                     </div>
-                </form:form>
-            </div>
+                </div>
+            </c:forEach>
         </div>
     </div>
 </section>
-
-
-
 
 
 <footer class="footer text-center">
