@@ -29,6 +29,7 @@ public class IssueServiceImpl implements IssueService {
         issue.setUser(user);
         issue.setDob(LocalDate.now());
         issue.setTob(LocalTime.now());
+        issue.setSolved(false);
 
         issueRepository.save(issue);
     }
