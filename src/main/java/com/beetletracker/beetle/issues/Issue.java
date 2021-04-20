@@ -1,8 +1,10 @@
 package com.beetletracker.beetle.issues;
+import com.beetletracker.beetle.user.User;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Data
 @Entity
@@ -21,10 +23,15 @@ public class Issue {
     private Long id;
     private String name;
     private LocalDate dob;
+    private LocalTime tob;
     private String Topic;
     private String email;
     private String subject;
     private String description;
+    @ManyToOne
+    private User user;
+    @ManyToOne
+    private IssueCategory category;
 
 //    public Issue(String name,
 //                 LocalDate dob,
