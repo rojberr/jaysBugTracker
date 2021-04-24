@@ -12,6 +12,10 @@ A simple tool which I made ... -fill out later-
 
 I plan to use Jay's BugTracker to track my own bugs.
 
+This app is using heroku pipeline.
+It's firstly pushed to heroku server, tested and only after that promoted to production.
+You can find the dev version on: <https://beetle-tracker-dev.herokuapp.com/>
+It was done mainly to avoid site crashes. They were quite annoying.
 
 MY STACK:
 
