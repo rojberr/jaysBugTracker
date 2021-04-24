@@ -3,7 +3,10 @@
 :beetle: This is a Bug and Issue Tracker :beetle:
 
 Check it out:
+(remember that free hosted heroku apps go to sleep after 30 minutes of inactivity! My app needs ~40 sec to wake up!)
+
 <https://beetle-tracker.herokuapp.com/>
+
 
 A simple tool which I made ... -fill out later-
 
